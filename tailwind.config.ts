@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom Bè mì theme colors
+				bemi: {
+					primary: '#2A9D8F', // Teal green
+					secondary: '#E9C46A', // Warm yellow
+					accent: '#F4A261', // Orange
+					dark: '#264653', // Dark blue-green
+					light: '#E0F2F1', // Light teal
+					danger: '#E76F51', // Coral red
+					success: '#43A047', // Forest green
+					warning: '#F9A825', // Amber
+					info: '#0288D1', // Blue
+				},
+				// Waste category colors
+				waste: {
+					plastic: '#F94144', // Red
+					glass: '#90BE6D', // Green
+					paper: '#F9C74F', // Yellow
+					metal: '#43AA8B', // Teal
+					electronics: '#577590', // Blue
+					organic: '#A7C957', // Lime green
 				}
 			},
 			borderRadius: {
@@ -84,12 +106,36 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1',
+						boxShadow: '0 0 10px 5px rgba(42, 157, 143, 0.3)',
+					},
+					'50%': {
+						opacity: '0.7',
+						boxShadow: '0 0 20px 10px rgba(42, 157, 143, 0.6)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Montserrat', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
