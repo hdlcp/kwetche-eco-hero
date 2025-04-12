@@ -10,7 +10,7 @@ const NotFound = () => {
 
   useEffect(() => {
     console.error(
-      "404 Error: User attempted to access non-existent route:",
+      "Erreur 404: L'utilisateur a tenté d'accéder à une route inexistante:",
       location.pathname
     );
   }, [location.pathname]);
@@ -23,16 +23,16 @@ const NotFound = () => {
         </div>
         
         <h1 className="text-4xl font-bold mb-2">404</h1>
-        <p className="text-xl text-muted-foreground mb-8">Oops! Page not found</p>
+        <p className="text-xl text-muted-foreground mb-8">Oups! Page introuvable</p>
         
-        <Link to="/" className="bemi-button-primary flex items-center">
+        <Link to="/home" className="bemi-button-primary flex items-center">
           <ArrowLeft size={16} className="mr-2" />
-          Return to Home
+          Retour à l'Accueil
         </Link>
       </div>
       
       <div className="py-4 text-center text-xs text-muted-foreground">
-        &copy; 2025 Bè mì. All rights reserved.
+        &copy; 2025 Bè mì. Tous droits réservés.
       </div>
     </div>
   );

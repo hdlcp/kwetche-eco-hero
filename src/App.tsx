@@ -11,6 +11,8 @@ import SubmitWaste from "./pages/SubmitWaste";
 import Map from "./pages/Map";
 import Rewards from "./pages/Rewards";
 import Profile from "./pages/Profile";
+import SplashScreen from "./components/SplashScreen";
+import Onboarding from "./components/Onboarding";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +23,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<SplashScreen />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/home" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/submit" element={<SubmitWaste />} />
           <Route path="/map" element={<Map />} />

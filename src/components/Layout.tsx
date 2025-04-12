@@ -11,11 +11,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   
   const navItems = [
-    { path: "/", icon: Home, label: "Home" },
-    { path: "/map", icon: Map, label: "Map" },
-    { path: "/submit", icon: Plus, label: "Submit" },
-    { path: "/rewards", icon: Gift, label: "Rewards" },
-    { path: "/profile", icon: User, label: "Profile" },
+    { path: "/home", icon: Home, label: "Accueil" },
+    { path: "/map", icon: Map, label: "Carte" },
+    { path: "/submit", icon: Plus, label: "Déposer" },
+    { path: "/rewards", icon: Gift, label: "Récompenses" },
+    { path: "/profile", icon: User, label: "Profil" },
   ];
   
   const isActive = (path: string) => {
@@ -28,9 +28,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="bemi-container flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              alt="Bè mì Logo" 
+              alt="Logo Bè mì" 
               className="h-8 w-8 mr-2 rounded-full bg-white p-1"
-              src="/placeholder.svg" 
+              src="/lovable-uploads/a123446f-54fe-462b-9a8b-0414982a8abe.png" 
             />
             <h1 className="text-xl font-bold">Bè mì</h1>
           </div>

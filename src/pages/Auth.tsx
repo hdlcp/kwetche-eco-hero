@@ -13,14 +13,14 @@ const Auth = () => {
   
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would authenticate the user
-    navigate("/");
+    // Dans une vraie application, cela authentifierait l'utilisateur
+    navigate("/home");
   };
   
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would register the user
-    navigate("/");
+    // Dans une vraie application, cela enregistrerait l'utilisateur
+    navigate("/home");
   };
 
   return (
@@ -28,13 +28,17 @@ const Auth = () => {
       <div className="flex-1 flex flex-col justify-center px-4 py-12">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <div className="w-20 h-20 rounded-full bg-bemi-primary flex items-center justify-center shadow-lg">
-              <Leaf size={36} className="text-white" />
+            <div className="w-20 h-20 rounded-full flex items-center justify-center shadow-lg">
+              <img 
+                src="/lovable-uploads/a123446f-54fe-462b-9a8b-0414982a8abe.png" 
+                alt="Logo Bè mì"
+                className="w-full h-full object-contain" 
+              />
             </div>
           </div>
           <h1 className="text-3xl font-bold mb-2">Bè mì</h1>
           <p className="text-muted-foreground">
-            Join the eco-friendly waste management revolution
+            Rejoignez la révolution écologique du Bénin
           </p>
         </div>
         
@@ -42,10 +46,10 @@ const Auth = () => {
           <Tabs defaultValue="login" className="w-full" onValueChange={setActiveTab}>
             <TabsList className="grid grid-cols-2 w-full rounded-none">
               <TabsTrigger value="login" className="rounded-none py-3">
-                Login
+                Connexion
               </TabsTrigger>
               <TabsTrigger value="signup" className="rounded-none py-3">
-                Sign Up
+                Inscription
               </TabsTrigger>
             </TabsList>
             
@@ -60,7 +64,7 @@ const Auth = () => {
                     <Input 
                       id="email" 
                       type="email" 
-                      placeholder="youremail@example.com" 
+                      placeholder="votreemail@exemple.com" 
                       className="pl-10" 
                       required 
                     />
@@ -70,10 +74,10 @@ const Auth = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <label htmlFor="password" className="text-sm font-medium">
-                      Password
+                      Mot de passe
                     </label>
                     <a href="#" className="text-xs text-bemi-primary hover:underline">
-                      Forgot Password?
+                      Mot de passe oublié ?
                     </a>
                   </div>
                   <div className="relative">
@@ -89,7 +93,7 @@ const Auth = () => {
                 </div>
                 
                 <Button type="submit" className="w-full bemi-button-primary">
-                  Login
+                  Se connecter
                 </Button>
               </form>
             </TabsContent>
@@ -98,12 +102,12 @@ const Auth = () => {
               <form onSubmit={handleSignup} className="space-y-4">
                 <div className="space-y-2">
                   <label htmlFor="fullname" className="text-sm font-medium">
-                    Full Name
+                    Nom complet
                   </label>
                   <Input 
                     id="fullname" 
                     type="text" 
-                    placeholder="Your full name" 
+                    placeholder="Votre nom complet" 
                     required 
                   />
                 </div>
@@ -117,7 +121,7 @@ const Auth = () => {
                     <Input 
                       id="signup-email" 
                       type="email" 
-                      placeholder="youremail@example.com" 
+                      placeholder="votreemail@exemple.com" 
                       className="pl-10" 
                       required 
                     />
@@ -126,14 +130,14 @@ const Auth = () => {
                 
                 <div className="space-y-2">
                   <label htmlFor="signup-password" className="text-sm font-medium">
-                    Password
+                    Mot de passe
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
                     <Input 
                       id="signup-password" 
                       type="password" 
-                      placeholder="Create a password" 
+                      placeholder="Créer un mot de passe" 
                       className="pl-10" 
                       required 
                     />
@@ -150,12 +154,12 @@ const Auth = () => {
                     />
                   </div>
                   <label htmlFor="terms" className="text-xs text-muted-foreground">
-                    I agree to the <a href="#" className="text-bemi-primary hover:underline">Terms of Service</a> and <a href="#" className="text-bemi-primary hover:underline">Privacy Policy</a>
+                    J'accepte les <a href="#" className="text-bemi-primary hover:underline">Conditions d'utilisation</a> et la <a href="#" className="text-bemi-primary hover:underline">Politique de confidentialité</a>
                   </label>
                 </div>
                 
                 <Button type="submit" className="w-full bemi-button-primary">
-                  Create Account
+                  Créer un compte
                 </Button>
               </form>
             </TabsContent>
@@ -170,28 +174,28 @@ const Auth = () => {
               <div className="mx-auto w-10 h-10 rounded-full bg-bemi-success/10 flex items-center justify-center">
                 <Trash2 size={20} className="text-bemi-success" />
               </div>
-              <p className="text-xs font-medium">Collect Waste</p>
+              <p className="text-xs font-medium">Collectez des déchets</p>
             </div>
             
             <div className="space-y-1">
               <div className="mx-auto w-10 h-10 rounded-full bg-bemi-primary/10 flex items-center justify-center">
                 <CheckCircle size={20} className="text-bemi-primary" />
               </div>
-              <p className="text-xs font-medium">Deposit & Verify</p>
+              <p className="text-xs font-medium">Déposez & Vérifiez</p>
             </div>
             
             <div className="space-y-1">
               <div className="mx-auto w-10 h-10 rounded-full bg-bemi-secondary/10 flex items-center justify-center">
                 <Leaf size={20} className="text-bemi-secondary" />
               </div>
-              <p className="text-xs font-medium">Earn Rewards</p>
+              <p className="text-xs font-medium">Gagnez des récompenses</p>
             </div>
           </div>
         </div>
       </div>
       
       <div className="py-4 text-center text-xs text-muted-foreground">
-        &copy; 2025 Bè mì. All rights reserved.
+        &copy; 2025 Bè mì. Tous droits réservés.
       </div>
     </div>
   );
